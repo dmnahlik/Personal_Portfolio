@@ -112,3 +112,9 @@ please create plan for implementing the Next.js framework.
 
 ## 2026-11-08 22:43 CST
 yes (begin implementing the approved Next.js migration plan)
+
+## 2026-11-08 23:04 CST
+change that line in CLAUDE.md to "Python server (Poetry) + Next.js/TypeScript front end (static export)".
+
+## 2026-11-08 23:04 CST
+the preview looks good. please switch to the live site

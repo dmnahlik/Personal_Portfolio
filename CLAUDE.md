@@ -12,7 +12,7 @@
 - Use underscores, not hyphens, in names you choose (files, folders, branches).
 
 ## Project
-- Python, managed with Poetry.
+- Python server (Poetry) + Next.js/TypeScript front end (static export).
 - Keep a `README.md` that explains how to install and run the app. Update it whenever the app changes.
 - Do not add packages we don't need.
 - Never put API keys, passwords, or other secrets in the code or in any file that gets committed.
