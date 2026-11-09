@@ -1,0 +1,88 @@
+/* =========================================================
+   RESPONSIVE DESIGN: breakpoints
+   Desktop layout is the default in sections.css; these
+   rules progressively adapt it to smaller screens.
+     ≤1024px  tablet landscape
+     ≤768px   tablet portrait / large phone (hamburger nav)
+     ≤480px   small phone
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .card-grid,
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero__inner { gap: var(--space-8); }
+}
+
+@media (max-width: 768px) {
+  /* Hamburger navigation */
+  .nav__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: none;
+    background: transparent;
+  }
+  .nav__toggle-bar {
+    display: block;
+    height: 2px;
+    width: 100%;
+    border-radius: 2px;
+    background: var(--color-text);
+    transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
+  }
+  .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(2) { opacity: 0; }
+  .nav__toggle[aria-expanded="true"] .nav__toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .nav__menu {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-1);
+    padding: var(--space-4) var(--gutter) var(--space-6);
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), visibility var(--dur);
+  }
+  .nav__menu.is-open { opacity: 1; transform: none; visibility: visible; }
+  .nav__link { padding: var(--space-3) var(--space-4); font-size: var(--fs-base); }
+  .theme-toggle { margin: var(--space-2) var(--space-4) 0; }
+
+  /* Hero stacks, photo first */
+  .hero__inner { grid-template-columns: 1fr; text-align: center; }
+  .hero__media { order: -1; }
+  .hero__photo { width: min(220px, 60vw); }
+  .hero__intro { margin-inline: auto; }
+  .hero__actions { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .card-grid,
+  .skills-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  :root { --gutter: 1rem; }
+  .hero__actions .btn { flex: 1 1 100%; }
+  .contact__links { flex-direction: column; align-items: stretch; }
+  .site-footer__inner { flex-direction: column; text-align: center; }
+}
+
+/* Print: clean, ink-friendly version */
+@media print {
+  .site-header, .filters, .hero__actions, .back-to-top, .theme-toggle, .contact__email button { display: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .section { padding-block: 1.5rem; }
+  .card, .skill-group { break-inside: avoid; box-shadow: none; }
+}

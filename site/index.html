@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Professional Polish: SEO + social preview (TODO: update text and og:image/url after content is final) -->
+  <title>David Nahlik | Portfolio</title>
+  <meta name="description" content="Personal portfolio of David Nahlik: projects, awards, skills, and contact information." />
+  <meta name="author" content="David Nahlik" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="David Nahlik | Portfolio" />
+  <meta property="og:description" content="Projects, awards, skills, and contact information." />
+  <meta property="og:image" content="assets/img/og_image.svg" />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+  <!-- Apply saved theme before paint to avoid a flash (kept external for a strict CSP) -->
+  <script src="js/theme_init.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#home" class="nav__brand" data-bind="profile.initials">DN</a>
+
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a class="nav__link" href="#home">Home</a></li>
+        <li><a class="nav__link" href="#projects">Projects &amp; Awards</a></li>
+        <li><a class="nav__link" href="#skills">Skills</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
+            <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ 1. HOME / LANDING ============ -->
+    <section class="section hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__text reveal">
+          <p class="hero__eyebrow" data-bind="profile.greeting"></p>
+          <h1 class="hero__title" id="hero-title" data-bind="profile.name"></h1>
+          <p class="hero__role" data-bind="profile.title"></p>
+          <p class="hero__intro" data-bind="profile.intro"></p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View My Work</a>
+            <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+            <a class="btn btn--ghost" id="resume-link" target="_blank" rel="noopener" hidden>Résumé</a>
+          </div>
+        </div>
+        <div class="hero__media reveal">
+          <img class="hero__photo" id="hero-photo" src="assets/img/headshot_placeholder.svg" alt="Portrait of David Nahlik" width="320" height="320" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. PROJECTS / AWARDS SHOWCASE ============ -->
+    <section class="section section--alt" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title" id="projects-title">Projects &amp; Awards</h2>
+          <p class="section__subtitle" data-bind="sections.projectsSubtitle"></p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filter showcase">
+          <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="project" aria-pressed="false">Projects</button>
+          <button class="filter" data-filter="award" aria-pressed="false">Awards</button>
+        </div>
+
+        <div class="card-grid" id="showcase-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ============ 3. SKILLS ============ -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <h2 class="section__title" id="skills-title">Skills</h2>
+          <p class="section__subtitle" data-bind="sections.skillsSubtitle"></p>
+        </header>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ 4. CONTACT ============ -->
+    <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <header class="section__header reveal">
+          <h2 class="section__title" id="contact-title">Contact</h2>
+          <p class="section__subtitle" data-bind="sections.contactSubtitle"></p>
+        </header>
+
+        <div class="contact__email reveal">
+          <a class="btn btn--primary btn--lg" id="email-link" href="#">Email Me</a>
+          <button class="btn btn--ghost" id="copy-email" type="button">Copy email</button>
+          <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
+        </div>
+
+        <ul class="contact__links reveal" id="contact-links"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; <span id="year"></span> <span data-bind="profile.name"></span>. All rights reserved.</p>
+      <a href="#top" class="back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

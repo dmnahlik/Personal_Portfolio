@@ -1,0 +1,98 @@
+/* =========================================================
+   PROFESSIONAL POLISH: design tokens
+   Change colors, fonts, and spacing here; everything else
+   references these variables.
+   ========================================================= */
+
+:root {
+  /* Brand */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-accent: #0ea5e9;
+
+  /* Surfaces & text (light) */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f7fb;
+  --color-surface: #ffffff;
+  --color-border: #e3e8f0;
+  --color-text: #0f172a;
+  --color-text-muted: #526075;
+  --color-on-primary: #ffffff;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 6px 20px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 14px 40px rgba(15, 23, 42, 0.12);
+
+  /* Typography */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-lg: clamp(1.05rem, 1rem + 0.3vw, 1.2rem);
+  --fs-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --fs-2xl: clamp(1.75rem, 1.4rem + 1.4vw, 2.5rem);
+  --fs-3xl: clamp(2.25rem, 1.6rem + 3vw, 4rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --section-pad: clamp(4rem, 3rem + 4vw, 7rem);
+
+  /* Layout */
+  --container: 1120px;
+  --gutter: 1.25rem;
+  --nav-height: 68px;
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 20px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur: 0.25s;
+
+  color-scheme: light;
+}
+
+/* Dark theme: follows the OS unless the user picked light */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-primary: #60a5fa;
+    --color-primary-hover: #93c5fd;
+    --color-accent: #38bdf8;
+    --color-bg: #0b1120;
+    --color-bg-alt: #111a2e;
+    --color-surface: #16213a;
+    --color-border: #24314f;
+    --color-text: #e6ebf5;
+    --color-text-muted: #9aa8c2;
+    --color-on-primary: #0b1120;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.45);
+    color-scheme: dark;
+  }
+}
+
+/* Dark theme: explicit user choice */
+:root[data-theme="dark"] {
+  --color-primary: #60a5fa;
+  --color-primary-hover: #93c5fd;
+  --color-accent: #38bdf8;
+  --color-bg: #0b1120;
+  --color-bg-alt: #111a2e;
+  --color-surface: #16213a;
+  --color-border: #24314f;
+  --color-text: #e6ebf5;
+  --color-text-muted: #9aa8c2;
+  --color-on-primary: #0b1120;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.45);
+  color-scheme: dark;
+}

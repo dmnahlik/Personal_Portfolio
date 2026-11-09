@@ -1,0 +1,183 @@
+/* =========================================================
+   SECTIONS: nav, hero, showcase, skills, contact, footer
+   (mobile-first; larger-screen tweaks live in responsive.css)
+   ========================================================= */
+
+/* ---------- Navigation ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  background: color-mix(in srgb, var(--color-bg) 85%, transparent);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.site-header.is-scrolled { border-bottom-color: var(--color-border); box-shadow: var(--shadow-sm); }
+
+.nav { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+.nav__brand { font-weight: 800; font-size: var(--fs-xl); color: var(--color-text); letter-spacing: -0.03em; }
+.nav__brand:hover { color: var(--color-primary); }
+
+.nav__menu { display: flex; align-items: center; gap: var(--space-2); }
+.nav__link {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  transition: color var(--dur) var(--ease), background-color var(--dur) var(--ease);
+}
+.nav__link:hover, .nav__link.is-active { color: var(--color-primary); }
+.nav__link.is-active { background: color-mix(in srgb, var(--color-primary) 10%, transparent); }
+
+.nav__toggle { display: none; }
+
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+.theme-toggle:hover { color: var(--color-primary); border-color: var(--color-primary); }
+.theme-toggle .icon--sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon--sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon--moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon--sun { display: block; }
+  :root:not([data-theme="light"]) .theme-toggle .icon--moon { display: none; }
+}
+
+/* ---------- 1. Home / Landing ---------- */
+.hero {
+  min-height: calc(100vh - var(--nav-height));
+  min-height: calc(100svh - var(--nav-height));
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(60% 60% at 85% 20%, color-mix(in srgb, var(--color-accent) 14%, transparent), transparent),
+    radial-gradient(50% 50% at 10% 90%, color-mix(in srgb, var(--color-primary) 12%, transparent), transparent);
+}
+.hero__inner { display: grid; grid-template-columns: 1.4fr 1fr; align-items: center; gap: var(--space-12); }
+.hero__eyebrow { font-weight: 600; color: var(--color-primary); letter-spacing: 0.04em; text-transform: uppercase; font-size: var(--fs-sm); }
+.hero__title { margin-top: var(--space-2); font-size: var(--fs-3xl); font-weight: 800; }
+.hero__role {
+  margin-top: var(--space-2);
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero__intro { margin-top: var(--space-6); max-width: 56ch; font-size: var(--fs-lg); color: var(--color-text-muted); }
+.hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8); }
+.hero__media { justify-self: center; }
+.hero__photo {
+  width: min(320px, 70vw);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--color-surface);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ---------- 2. Projects / Awards Showcase ---------- */
+.filters { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-8); }
+.filter {
+  min-height: 40px;
+  padding: var(--space-2) var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  font-weight: 500;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  transition: all var(--dur) var(--ease);
+}
+.filter:hover { color: var(--color-primary); border-color: var(--color-primary); }
+.filter.is-active { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-on-primary); }
+
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.card[hidden] { display: none; }
+.card__media { aspect-ratio: 16 / 9; background: var(--color-bg-alt); overflow: hidden; }
+.card__media img { width: 100%; height: 100%; object-fit: cover; }
+.card__body { display: flex; flex-direction: column; flex: 1; gap: var(--space-3); padding: var(--space-6); }
+.card__meta { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); font-size: var(--fs-xs); color: var(--color-text-muted); }
+.card__type { font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-accent); }
+.card__title { font-size: var(--fs-lg); font-weight: 700; }
+.card__desc { color: var(--color-text-muted); font-size: var(--fs-sm); flex: 1; }
+.card__tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.card__links { display: flex; gap: var(--space-4); padding-top: var(--space-2); border-top: 1px solid var(--color-border); }
+.card__links a { font-weight: 600; font-size: var(--fs-sm); }
+
+.empty-state { grid-column: 1 / -1; text-align: center; color: var(--color-text-muted); }
+
+/* ---------- 3. Skills ---------- */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.skill-group {
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.skill-group__title { display: flex; align-items: center; gap: var(--space-2); font-size: var(--fs-lg); font-weight: 700; margin-bottom: var(--space-4); }
+.skill-group__icon { font-size: 1.4rem; }
+.skill-list { display: flex; flex-direction: column; gap: var(--space-3); }
+.skill__row { display: flex; justify-content: space-between; font-size: var(--fs-sm); font-weight: 500; }
+.skill__level { color: var(--color-text-muted); font-size: var(--fs-xs); }
+.skill__bar { height: 6px; margin-top: var(--space-1); border-radius: 3px; background: var(--color-bg-alt); overflow: hidden; }
+.skill__fill {
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  transition: width 1s var(--ease);
+}
+.skill-group.is-visible .skill__fill { width: var(--level); }
+.skill-chips { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+/* ---------- 4. Contact ---------- */
+.contact { text-align: center; }
+.contact__email { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--space-3); }
+.copy-status { flex-basis: 100%; min-height: 1.5em; font-size: var(--fs-sm); color: var(--color-text-muted); }
+.contact__links { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4); margin-top: var(--space-8); }
+.contact__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 48px;
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  font-weight: 500;
+  transition: all var(--dur) var(--ease);
+}
+a.contact__link:hover { border-color: var(--color-primary); color: var(--color-primary); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+/* ---------- Footer ---------- */
+.site-footer { padding-block: var(--space-8); border-top: 1px solid var(--color-border); font-size: var(--fs-sm); color: var(--color-text-muted); }
+.site-footer__inner { display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); }
+.back-to-top { font-weight: 600; }

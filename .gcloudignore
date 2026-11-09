@@ -1,0 +1,15 @@
+# Files NOT uploaded to Cloud Build by `gcloud run deploy --source .`
+.gcloudignore
+.git
+.gitignore
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+tests/
+plans/
+PROMPTS.md
+CLAUDE.md
+.vscode/
+.idea/

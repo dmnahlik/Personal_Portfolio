@@ -1,0 +1,18 @@
+[project]
+name = "personal_portfolio"
+version = "0.1.0"
+description = "David Nahlik's single-page personal portfolio, served by a stdlib-only Python server."
+authors = [{ name = "David Nahlik" }]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+serve = "portfolio_server.server:main"
+
+[tool.poetry]
+packages = [{ include = "portfolio_server" }]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
