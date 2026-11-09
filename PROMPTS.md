@@ -34,3 +34,9 @@ can you provide a like to where it was published. the link from my google cloud 
 
 ## 2026-11-08 20:19 CST
 I am still seeing the placeholder intro and the placeholder picture from the link on my google cloude page (https://personal-portfolio-86737582063.us-central1.run.app). However, the links you provided seam to work fine.
+
+## 2026-11-08 20:21 CST
+That seams to have worked Thank you.  Please update my role and title to "CAPA Team Lead"
+
+## 2026-11-08 20:22 CST
+go ahead and push and deploy this change

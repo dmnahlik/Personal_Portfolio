@@ -10,7 +10,7 @@ window.PORTFOLIO = {
     name: "David Nahlik",                       // TODO: confirm display name
     initials: "DN",
     greeting: "Hello, I'm",
-    title: "TODO: Your Title / Role",           // e.g. "Cloud & Software Developer"
+    title: "CAPA Team Lead",
     intro:
       "Hardworking Quality Leader with a focus in continuous improvement and Lean Six Sigma. With over a decade of experience in pharmaceutical and aerospace manufacturing, I have worked hundreds of corrective actions and Lean projects that have reduced cost and waste for the various companies I have worked for.",
     photo: "assets/img/headshot.jpg",
