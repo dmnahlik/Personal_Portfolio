@@ -100,3 +100,15 @@ In the header section, remove the bubble for "Résumé"
 
 ## 2026-11-08 22:24 CST
 push and deploy these updates
+
+## 2026-11-08 22:33 CST
+Based on the current setup of the project, which technology stack is recommented to include: Create a React App, A React framework using Next.js, or a progressive JavaScript framework (Vue.js)?
+
+## 2026-11-08 22:40 CST
+what will Next.js actually do for the webpage
+
+## 2026-11-08 22:41 CST
+please create plan for implementing the Next.js framework.
+
+## 2026-11-08 22:43 CST
+yes (begin implementing the approved Next.js migration plan)

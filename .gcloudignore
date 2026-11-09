@@ -13,3 +13,8 @@ PROMPTS.md
 CLAUDE.md
 .vscode/
 .idea/
+# Rebuilt by Cloud Build from web/ (keeps the upload small)
+web/node_modules/
+web/.next/
+web/out/
+*.tsbuildinfo

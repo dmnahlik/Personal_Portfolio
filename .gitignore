@@ -4,6 +4,13 @@ __pycache__/
 .venv/
 dist/
 
+# Next.js / Node (web/)
+web/node_modules/
+web/.next/
+web/out/
+web/next-env.d.ts
+*.tsbuildinfo
+
 # Secrets / local env
 .env
 .env.*

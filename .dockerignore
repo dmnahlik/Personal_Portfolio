@@ -11,3 +11,8 @@ PROMPTS.md
 CLAUDE.md
 .vscode
 .idea
+# Rebuilt inside the image
+web/node_modules
+web/.next
+web/out
+*.tsbuildinfo
