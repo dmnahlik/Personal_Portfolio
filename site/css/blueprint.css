@@ -1,0 +1,99 @@
+/* =========================================================
+   BLUEPRINT DRAWINGS: decorative engineering line art that
+   draws itself on a loop behind the content.
+   Tune with the variables below; markup lives in index.html.
+   ========================================================= */
+
+.blueprint {
+  --bp-cycle: 16s;          /* one draw → hold → fade loop */
+  position: fixed;
+  inset: 0;
+  z-index: -1;              /* above the grid (body::before), below content */
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bp-drawing {
+  position: absolute;
+  overflow: visible;
+  fill: none;
+  stroke: var(--drawing-stroke);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Placement: kept near the edges, away from the centered text column */
+.bp-gear    { top: 11vh;    right: -1vw; width: min(28vw, 340px); --bp-offset: 0s; }
+.bp-bracket { bottom: 5vh;  left: 1.5vw; width: min(28vw, 330px); --bp-offset: 4s; }
+.bp-hex     { top: 16vh;    left: 2vw;   width: min(15vw, 180px); --bp-offset: 8s; }
+.bp-title   { bottom: 3vh;  right: 2vw;  width: min(22vw, 270px); --bp-offset: 12s; }
+
+/* Stroke weights */
+.bp-line { stroke-width: 1.4; }
+.bp-dim  { stroke-width: 0.8; }
+
+/* Pen-drawing effect */
+.bp-line,
+.bp-dim {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: bp-draw var(--bp-cycle) ease-in-out infinite;
+  animation-delay: calc(var(--bp-offset, 0s) + var(--bp-step, 0s));
+}
+
+.bp-label {
+  fill: var(--drawing-stroke);
+  stroke: none;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  opacity: 0;
+  animation: bp-label var(--bp-cycle) ease-in-out infinite;
+  animation-delay: var(--bp-offset, 0s);
+}
+.bp-label--lg { font-size: 11px; font-weight: 600; }
+
+/* Stagger strokes within each drawing */
+.s1 { --bp-step: 0s; }
+.s2 { --bp-step: 0.9s; }
+.s3 { --bp-step: 1.6s; }
+.s4 { --bp-step: 2.3s; }
+.s5 { --bp-step: 2.9s; }
+
+@keyframes bp-draw {
+  0%   { stroke-dashoffset: 1; opacity: 1; }
+  30%  { stroke-dashoffset: 0; opacity: 1; }
+  78%  { stroke-dashoffset: 0; opacity: 1; }
+  90%  { stroke-dashoffset: 0; opacity: 0; }
+  100% { stroke-dashoffset: 1; opacity: 0; }
+}
+
+@keyframes bp-label {
+  0%, 30% { opacity: 0; }
+  42%     { opacity: 1; }
+  78%     { opacity: 1; }
+  90%, 100% { opacity: 0; }
+}
+
+/* Smaller screens: fewer, smaller drawings */
+@media (max-width: 768px) {
+  .bp-hex,
+  .bp-title { display: none; }
+  .bp-gear    { width: 52vw; right: -10vw; top: 9vh; }
+  .bp-bracket { width: 55vw; left: -4vw; bottom: 4vh; }
+}
+
+/* Respect reduced-motion: show the drawings complete and still */
+@media (prefers-reduced-motion: reduce) {
+  .bp-line,
+  .bp-dim,
+  .bp-label {
+    animation: none !important;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@media print {
+  .blueprint { display: none; }
+}

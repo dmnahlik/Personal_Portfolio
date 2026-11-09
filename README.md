@@ -11,6 +11,7 @@ site/                     # the website (everything the browser loads)
   css/base.css            # reset, typography, buttons, accessibility helpers
   css/sections.css        # styles for each section
   css/responsive.css      # breakpoints (1024 / 768 / 600 / 480px) + print
+  css/blueprint.css       # animated engineering drawings over the blueprint grid
   js/data.js              # ← ALL CONTENT LIVES HERE (look for "TODO")
   js/render.js            # renders data.js into the page
   js/main.js              # nav, mobile menu, filters, theme toggle, animations

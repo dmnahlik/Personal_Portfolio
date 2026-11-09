@@ -40,3 +40,12 @@ That seams to have worked Thank you.  Please update my role and title to "CAPA T
 
 ## 2026-11-08 20:22 CST
 go ahead and push and deploy this change
+
+## 2026-11-08 20:28 CST
+Can you apply a background theme to the web page? I am thinkign a subtle blueprint typre background that will not distract from the content
+
+## 2026-11-08 20:31 CST
+On the grid pattern of the blueprint brackground, can you do some subtle engineering drawings being drawn?
+
+## 2026-11-08 20:34 CST
+please push and deploy these updates

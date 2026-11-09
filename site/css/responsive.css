@@ -81,6 +81,7 @@
 
 /* Print: clean, ink-friendly version */
 @media print {
+  body::before { display: none; }
   .site-header, .filters, .hero__actions, .back-to-top, .theme-toggle, .contact__email button { display: none !important; }
   .reveal { opacity: 1 !important; transform: none !important; }
   .section { padding-block: 1.5rem; }

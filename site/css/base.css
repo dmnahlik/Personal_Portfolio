@@ -24,6 +24,29 @@ body {
   transition: background-color var(--dur) var(--ease), color var(--dur) var(--ease);
 }
 
+/* Blueprint background: fixed grid layer behind all content.
+   Minor + major lines, faded toward the edges with a radial mask. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid-major) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-major) 1px, transparent 1px),
+    linear-gradient(var(--grid-minor) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-minor) 1px, transparent 1px);
+  background-size:
+    var(--grid-major-size) var(--grid-major-size),
+    var(--grid-major-size) var(--grid-major-size),
+    var(--grid-size) var(--grid-size),
+    var(--grid-size) var(--grid-size);
+  background-position: -1px -1px;
+  -webkit-mask-image: radial-gradient(ellipse 120% 100% at 50% 40%, #000 55%, transparent 100%);
+  mask-image: radial-gradient(ellipse 120% 100% at 50% 40%, #000 55%, transparent 100%);
+}
+
 img, svg { display: block; max-width: 100%; height: auto; }
 button, input, textarea { font: inherit; color: inherit; }
 button { cursor: pointer; }
@@ -68,7 +91,8 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -0.02em; }
 }
 
 .section { padding-block: var(--section-pad); }
-.section--alt { background: var(--color-bg-alt); }
+/* Translucent so the blueprint grid shows through alternating sections */
+.section--alt { background: color-mix(in srgb, var(--color-bg-alt) 65%, transparent); }
 
 .section__header {
   max-width: 640px;

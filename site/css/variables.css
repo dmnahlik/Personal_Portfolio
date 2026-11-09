@@ -19,6 +19,13 @@
   --color-text-muted: #526075;
   --color-on-primary: #ffffff;
 
+  /* Blueprint background grid (keep these faint so content stays primary) */
+  --grid-minor: rgba(37, 99, 235, 0.06);
+  --grid-major: rgba(37, 99, 235, 0.11);
+  --drawing-stroke: rgba(37, 99, 235, 0.22); /* animated engineering drawings */
+  --grid-size: 24px;          /* minor square */
+  --grid-major-size: 120px;   /* every 5th line is heavier */
+
   --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
   --shadow-md: 0 6px 20px rgba(15, 23, 42, 0.08);
   --shadow-lg: 0 14px 40px rgba(15, 23, 42, 0.12);
@@ -72,6 +79,9 @@
     --color-text: #e6ebf5;
     --color-text-muted: #9aa8c2;
     --color-on-primary: #0b1120;
+    --grid-minor: rgba(96, 165, 250, 0.05);
+    --grid-major: rgba(96, 165, 250, 0.10);
+    --drawing-stroke: rgba(96, 165, 250, 0.18);
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.35);
     --shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.45);
@@ -91,6 +101,9 @@
   --color-text: #e6ebf5;
   --color-text-muted: #9aa8c2;
   --color-on-primary: #0b1120;
+  --grid-minor: rgba(96, 165, 250, 0.05);
+  --grid-major: rgba(96, 165, 250, 0.10);
+  --drawing-stroke: rgba(96, 165, 250, 0.18);
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.45);
