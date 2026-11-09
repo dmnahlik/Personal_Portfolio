@@ -80,9 +80,9 @@ window.PORTFOLIO = {
       ]
     },
     {
-      category: "TODO: Tools",
+      category: "Tools",
       icon: "🛠️",
-      items: ["TODO", "Chip", "Style", "Skills"]
+      items: ["MS Office", "Claude AI", "RCCA", "Git"]
     }
   ],
 
