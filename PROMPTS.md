@@ -91,3 +91,12 @@ For the remaining skills category, update the title to "Document Review & Public
 
 ## 2026-11-08 22:14 CST
 Update the Skills section subtitle to "Skilled in Quality Management System and Document Review & Publication as well as in tools like MS Office and AI tools." Push and deploy this update
+
+## 2026-11-08 22:21 CST
+In the header section, replace "I'm" with "I am". In the contact section, please include a link to my LinkedIn profile: https://www.linkedin.com/in/dnahlik/
+
+## 2026-11-08 22:23 CST
+In the header section, remove the bubble for "Résumé"
+
+## 2026-11-08 22:24 CST
+push and deploy these updates

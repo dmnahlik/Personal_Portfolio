@@ -17,7 +17,6 @@ site/                     # the website (everything the browser loads)
   js/main.js              # nav, mobile menu, filters, theme toggle, animations
   js/theme_init.js        # restores saved light/dark theme before first paint
   assets/img/             # headshot, project images, favicon, social image
-  assets/resume/          # put your résumé PDF here
 portfolio_server/server.py  # stdlib static server (security headers, /health)
 tests/                    # server tests (unittest)
 Dockerfile                # container image for Cloud Run
@@ -60,8 +59,7 @@ poetry run python -m unittest -v
 
 ## Edit content
 
-Open `site/js/data.js` and replace each `TODO`. To change images, add files to `site/assets/img/` and point `profile.photo` or a showcase item's `image` at them. Put your résumé at `site/assets/resume/` and set `profile.resume`, which makes the Résumé button appear.
-
+Open `site/js/data.js` and replace each `TODO`. To change images, add files to `site/assets/img/` and point `profile.photo` or a showcase item's `image` at them.
 ## Deploy to Google Cloud Run
 
 GCP project: `dmnahlik-personal-portfolio`. Cloud Build builds the container remotely, so Docker isn't needed locally.

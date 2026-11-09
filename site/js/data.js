@@ -9,12 +9,11 @@ window.PORTFOLIO = {
   profile: {
     name: "David Nahlik",                       // TODO: confirm display name
     initials: "DN",
-    greeting: "Hello, I'm",
+    greeting: "Hello, I am",
     title: "CAPA Team Lead",
     intro:
       "Hardworking Quality Leader with a focus in continuous improvement and Lean Six Sigma. With over a decade of experience in pharmaceutical and aerospace manufacturing, I have worked hundreds of corrective actions and Lean projects that have reduced cost and waste for the various companies I have worked for.",
-    photo: "assets/img/headshot.jpg",
-    resume: ""                                   // TODO: e.g. "assets/resume/David_Nahlik_Resume.pdf" (button hidden while empty)
+    photo: "assets/img/headshot.jpg"
   },
 
   /* Section subtitles */
@@ -95,7 +94,7 @@ window.PORTFOLIO = {
     location: "Arnold, Missouri",
     links: [
       { label: "GitHub", url: "https://github.com/dmnahlik", icon: "github" },
-      { label: "LinkedIn", url: "", icon: "linkedin" } // TODO: LinkedIn URL
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/dnahlik/", icon: "linkedin" }
     ]
   }
 };

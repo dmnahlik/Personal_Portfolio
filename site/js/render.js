@@ -66,11 +66,6 @@
       photo.src = p.photo;
       photo.alt = "Portrait of " + (p.name || "me");
     }
-    const resume = document.getElementById("resume-link");
-    if (resume && p.resume) {
-      resume.href = p.resume;
-      resume.hidden = false;
-    }
     if (p.name) document.title = p.name + " | Portfolio";
   }
 

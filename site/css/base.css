@@ -47,6 +47,9 @@ body::before {
   mask-image: radial-gradient(ellipse 120% 100% at 50% 40%, #000 55%, transparent 100%);
 }
 
+/* Make the `hidden` attribute win over component display rules (e.g. .btn) */
+[hidden] { display: none !important; }
+
 img, svg { display: block; max-width: 100%; height: auto; }
 button, input, textarea { font: inherit; color: inherit; }
 button { cursor: pointer; }
