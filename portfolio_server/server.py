@@ -1,6 +1,6 @@
 """Static file server for the portfolio, built only on the Python standard library.
 
-Serves the ``site/`` folder with security and cache headers, a ``/healthz``
+Serves the ``site/`` folder with security and cache headers, a ``/health``
 endpoint, and a single-page-app fallback to ``index.html``. Cloud Run sets the
 ``PORT`` environment variable; it defaults to 8080 locally.
 """
@@ -59,7 +59,7 @@ class PortfolioHandler(SimpleHTTPRequestHandler):
         super().do_HEAD()
 
     def _handle_health(self, head_only: bool = False) -> bool:
-        if urlsplit(self.path).path != "/healthz":
+        if urlsplit(self.path).path != "/health":
             return False
         body = b"ok"
         self.send_response(HTTPStatus.OK)
@@ -95,8 +95,8 @@ class PortfolioHandler(SimpleHTTPRequestHandler):
         for name, value in SECURITY_HEADERS.items():
             self.send_header(name, value)
         path = urlsplit(self.path).path
-        if getattr(self, "_status", None) != HTTPStatus.OK or path == "/healthz":
-            pass  # errors and health checks are never cached (healthz sets its own)
+        if getattr(self, "_status", None) != HTTPStatus.OK or path == "/health":
+            pass  # errors and health checks are never cached (health sets its own)
         elif path.endswith((".html", "/")):
             self.send_header("Cache-Control", "no-cache")
         else:

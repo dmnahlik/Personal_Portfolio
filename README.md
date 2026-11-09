@@ -17,7 +17,7 @@ site/                     # the website (everything the browser loads)
   js/theme_init.js        # restores saved light/dark theme before first paint
   assets/img/             # headshot, project images, favicon, social image
   assets/resume/          # put your résumé PDF here
-portfolio_server/server.py  # stdlib static server (security headers, /healthz)
+portfolio_server/server.py  # stdlib static server (security headers, /health)
 tests/                    # server tests (unittest)
 Dockerfile                # container image for Cloud Run
 ```
@@ -70,6 +70,11 @@ GCP project: `dmnahlik-personal-portfolio`. Cloud Build builds the container rem
 gcloud services enable run.googleapis.com cloudbuild.googleapis.com artifactregistry.googleapis.com \
   --project dmnahlik-personal-portfolio
 
+# one-time: let the default build service account read sources and push images
+gcloud projects add-iam-policy-binding dmnahlik-personal-portfolio \
+  --member="serviceAccount:86737582063-compute@developer.gserviceaccount.com" \
+  --role="roles/run.builder" --condition=None
+
 # deploy (run again after every change)
 gcloud run deploy personal-portfolio \
   --source . \
@@ -78,4 +83,6 @@ gcloud run deploy personal-portfolio \
   --allow-unauthenticated
 ```
 
-The command prints the service URL. Cloud Run service names only allow lowercase letters, digits, and hyphens, which is why the service is `personal-portfolio`. Files listed in `.gcloudignore` are not uploaded.
+Live site: https://personal-portfolio-86737582063.us-central1.run.app
+
+The health check is at `/health`. It isn't `/healthz` because Cloud Run reserves paths ending in `z`. Cloud Run service names only allow lowercase letters, digits, and hyphens, which is why the service is `personal-portfolio`. Files listed in `.gcloudignore` are not uploaded.

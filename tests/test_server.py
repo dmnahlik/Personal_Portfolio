@@ -37,8 +37,8 @@ class ServerTests(unittest.TestCase):
             self.assertEqual(r.status, 200)
             self.assertIn("max-age", r.headers["Cache-Control"])
 
-    def test_healthz(self):
-        with self.get("/healthz") as r:
+    def test_health(self):
+        with self.get("/health") as r:
             self.assertEqual(r.read(), b"ok")
 
     def test_spa_fallback_for_extensionless_path(self):
