@@ -67,3 +67,9 @@ For the second project, update the title to "Deploy Augmented Reality Headsets f
 
 ## 2026-11-08 21:02 CST
 push and deploy these updates
+
+## 2026-11-08 21:16 CST
+For the third card, please include the attached image in the header. The year of this award is 2026. Update the title to "Boeing Gold Recognition". Update the desctription to "Recognized by leadership for outstanding work and exemplifying the company values." (attached certificate of recognition image)
+
+## 2026-11-08 21:16 CST
+This looks great. please push and deploy these updates.

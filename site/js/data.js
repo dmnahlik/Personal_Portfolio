@@ -50,11 +50,11 @@ window.PORTFOLIO = {
     },
     {
       type: "award",
-      title: "TODO: Award / Recognition",
+      title: "Boeing Gold Recognition",
       date: "2026",
-      description: "TODO: Who awarded it and why.",
+      description: "Recognized by leadership for outstanding work and exemplifying the company values.",
       tags: ["Award"],
-      image: "",
+      image: "assets/img/boeing_gold_recognition.jpg",
       links: []
     }
   ],
