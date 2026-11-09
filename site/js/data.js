@@ -31,9 +31,9 @@ window.PORTFOLIO = {
   showcase: [
     {
       type: "project",
-      title: "TODO: Project One",
-      date: "2026",
-      description: "TODO: What it is, the problem it solves, and your role.",
+      title: "Biopharmaceutical Perfusion Tiger Team 2022",
+      date: "2022",
+      description: "Led a team of cross-functional leaders to eliminate priority issues causing production shutdowns.",
       tags: ["TODO", "Tech", "Stack"],
       image: "",
       links: [
