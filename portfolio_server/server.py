@@ -95,12 +95,11 @@ class PortfolioHandler(SimpleHTTPRequestHandler):
         for name, value in SECURITY_HEADERS.items():
             self.send_header(name, value)
         path = urlsplit(self.path).path
-        if getattr(self, "_status", None) != HTTPStatus.OK or path == "/health":
-            pass  # errors and health checks are never cached (health sets its own)
-        elif path.endswith((".html", "/")):
+        # File names aren't versioned, so browsers must revalidate every file
+        # (cheap 304 via Last-Modified) or edits stay hidden behind stale caches.
+        # Errors and /health set no cache header here (health sets its own).
+        if getattr(self, "_status", None) in (HTTPStatus.OK, HTTPStatus.NOT_MODIFIED) and path != "/health":
             self.send_header("Cache-Control", "no-cache")
-        else:
-            self.send_header("Cache-Control", "public, max-age=3600")
         super().end_headers()
 
 

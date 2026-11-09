@@ -32,10 +32,15 @@ class ServerTests(unittest.TestCase):
             self.assertEqual(r.headers["X-Content-Type-Options"], "nosniff")
             self.assertEqual(r.headers["Cache-Control"], "no-cache")
 
-    def test_static_asset_cached(self):
-        with self.get("/css/base.css") as r:
+    def test_static_asset_revalidated(self):
+        with self.get("/js/data.js") as r:
             self.assertEqual(r.status, 200)
-            self.assertIn("max-age", r.headers["Cache-Control"])
+            self.assertEqual(r.headers["Cache-Control"], "no-cache")
+            last_modified = r.headers["Last-Modified"]
+        req = urllib.request.Request(self.base + "/js/data.js", headers={"If-Modified-Since": last_modified})
+        with self.assertRaises(urllib.error.HTTPError) as ctx:
+            urllib.request.urlopen(req, timeout=5)
+        self.assertEqual(ctx.exception.code, 304)
 
     def test_health(self):
         with self.get("/health") as r:
