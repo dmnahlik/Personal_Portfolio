@@ -28,3 +28,9 @@ please save and push these updates to the github repository and deploy to the go
 
 ## 2026-11-08 20:13 CST
 I do not see the updated profile picture I gave you (attached again) nor do I see the introduction description I provided
+
+## 2026-11-08 20:15 CST
+can you provide a like to where it was published. the link from my google cloud page in the DMNahlik-Personal Portfolio project is showing no changes
+
+## 2026-11-08 20:19 CST
+I am still seeing the placeholder intro and the placeholder picture from the link on my google cloude page (https://personal-portfolio-86737582063.us-central1.run.app). However, the links you provided seam to work fine.
