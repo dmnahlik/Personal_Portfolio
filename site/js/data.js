@@ -61,7 +61,8 @@ window.PORTFOLIO = {
 
   /* ---------- 3. Skills ----------
      Each group lists skills as { name, level } (level 0–100 shows a bar)
-     or as plain strings (shown as chips).                              */
+     or as plain strings (shown as chips). An optional `description`
+     shows a paragraph; leave `items` empty to show only the paragraph.                              */
   skills: [
     {
       category: "Quality Management System",
@@ -73,12 +74,11 @@ window.PORTFOLIO = {
       ]
     },
     {
-      category: "TODO: Cloud & DevOps",
-      icon: "☁️",
-      items: [
-        { name: "TODO: Skill C", level: 75 },
-        { name: "TODO: Skill D", level: 60 }
-      ]
+      category: "Document Review & Publication",
+      icon: "🖥️",
+      description:
+        "Gather relevant information from process SMEs, facilitate review sessions, cross-reference linked documents, and code and push document updates through relevant systems.",
+      items: []
     },
     {
       category: "Tools",

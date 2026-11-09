@@ -85,3 +85,6 @@ Update one of the skills cards to say "Quality Management System". Replace Skill
 
 ## 2026-11-08 21:46 CST
 Replace the laptop icon for the Quality Management System skill with the clipboard icon. Push and depoloy the update.
+
+## 2026-11-08 22:11 CST
+For the remaining skills category, update the title to "Document Review & Publication". Instead of bar charts, include this description: "Gather relevent information from process SMEs, facilitate review sessions, cross reference linked documents, code and push document updates through relevent systems.". Update the icon to the computer icon. Push and deploy these changes.

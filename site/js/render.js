@@ -137,7 +137,9 @@
       const items = group.items || [];
       const allChips = items.every((s) => typeof s === "string");
 
-      const list = allChips
+      const list = !items.length
+        ? null
+        : allChips
         ? el("div", { class: "skill-chips" }, items.map((s) => el("span", { class: "tag" }, s)))
         : el(
             "ul",
@@ -164,6 +166,7 @@
           "div",
           { class: "skill-group reveal" },
           el("h3", { class: "skill-group__title" }, group.icon ? el("span", { class: "skill-group__icon", "aria-hidden": "true" }, group.icon) : null, group.category),
+          group.description ? el("p", { class: "skill-group__desc" }, group.description) : null,
           list
         )
       );

@@ -144,6 +144,8 @@
 }
 .skill-group__title { display: flex; align-items: center; gap: var(--space-2); font-size: var(--fs-lg); font-weight: 700; margin-bottom: var(--space-4); }
 .skill-group__icon { font-size: 1.4rem; }
+.skill-group__desc { color: var(--color-text-muted); font-size: var(--fs-sm); line-height: 1.7; }
+.skill-group__desc + * { margin-top: var(--space-4); }
 .skill-list { display: flex; flex-direction: column; gap: var(--space-3); }
 .skill__row { display: flex; justify-content: space-between; font-size: var(--fs-sm); font-weight: 500; }
 .skill__level { color: var(--color-text-muted); font-size: var(--fs-xs); }
