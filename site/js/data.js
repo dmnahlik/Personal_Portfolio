@@ -34,12 +34,9 @@ window.PORTFOLIO = {
       title: "Biopharmaceutical Perfusion Tiger Team 2022",
       date: "2022",
       description: "Led a team of cross-functional leaders to eliminate priority issues causing production shutdowns.",
-      tags: ["TODO", "Tech", "Stack"],
+      tags: [],
       image: "",
-      links: [
-        { label: "Code", url: "https://github.com/dmnahlik" },
-        { label: "Live Demo", url: "" }
-      ]
+      links: []
     },
     {
       type: "project",

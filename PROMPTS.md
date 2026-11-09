@@ -52,3 +52,6 @@ please push and deploy these updates
 
 ## 2026-11-08 20:40 CST
 In the Projects & Awards Seciton. Update the first project to be titled: Biopharmaceuticl Perfusion Tiger Team 2022. Include the discription "Lead a team of cross functional leaders to eliminate priority issues causing production shutdowns". Push and depoy these changes.
+
+## 2026-11-08 20:43 CST
+Remove the TODO, Tech, and Stack tags from the first project and remove the "Code" link from the first project as well. Push and deploy these changes
