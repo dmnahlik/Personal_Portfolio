@@ -100,3 +100,24 @@ In the header section, remove the bubble for "Résumé"
 
 ## 2026-11-08 22:24 CST
 push and deploy these updates
+
+## 2026-11-08 22:33 CST
+Based on the current setup of the project, which technology stack is recommented to include: Create a React App, A React framework using Next.js, or a progressive JavaScript framework (Vue.js)?
+
+## 2026-11-08 22:40 CST
+what will Next.js actually do for the webpage
+
+## 2026-11-08 22:41 CST
+please create plan for implementing the Next.js framework.
+
+## 2026-11-08 22:43 CST
+yes (begin implementing the approved Next.js migration plan)
+
+## 2026-11-08 23:04 CST
+change that line in CLAUDE.md to "Python server (Poetry) + Next.js/TypeScript front end (static export)".
+
+## 2026-11-08 23:04 CST
+the preview looks good. please switch to the live site
+
+## 2026-11-08 23:09 CST
+proceed with that recommendation to merge thropugh a pull request and create a proper main branch.
