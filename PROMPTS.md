@@ -61,3 +61,9 @@ Please include this image in the header of the first project (attached biopharma
 
 ## 2026-11-08 20:51 CST
 Please replace that image with this one and then push and deploy (attached cleanroom bioreactor photo)
+
+## 2026-11-08 21:00 CST
+For the second project, update the title to "Deploy Augmented Reality Headsets for Training". The year of this project is 2020. Please update the title of the first project to remove "2022" from the title. In the description of the second project, please update to "Wrote augmented reality training programs using MS Hololense for training, general production use, and virtual client interractions." Remove the "TODO" tag from the second project. (attached AR factory image)
+
+## 2026-11-08 21:02 CST
+push and deploy these updates

@@ -32,7 +32,7 @@ window.PORTFOLIO = {
   showcase: [
     {
       type: "project",
-      title: "Biopharmaceutical Perfusion Tiger Team 2022",
+      title: "Biopharmaceutical Perfusion Tiger Team",
       date: "2022",
       description: "Led a team of cross-functional leaders to eliminate priority issues causing production shutdowns.",
       tags: [],
@@ -41,11 +41,11 @@ window.PORTFOLIO = {
     },
     {
       type: "project",
-      title: "TODO: Project Two",
-      date: "2026",
-      description: "TODO: Short description of the project and its impact.",
-      tags: ["TODO"],
-      image: "",
+      title: "Deploy Augmented Reality Headsets for Training",
+      date: "2020",
+      description: "Wrote augmented reality training programs using Microsoft HoloLens for training, general production use, and virtual client interactions.",
+      tags: [],
+      image: "assets/img/ar_headset_training.jpg",
       links: []
     },
     {
