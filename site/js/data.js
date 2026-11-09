@@ -27,6 +27,7 @@ window.PORTFOLIO = {
   /* ---------- 2. Projects / Awards Showcase ----------
      type:  "project" | "award"
      image: optional path under assets/img/ (placeholder used if empty)
+     imagePosition: optional crop anchor for the 16:9 frame, e.g. "left center", "50% 20%"
      links: optional list of { label, url }                          */
   showcase: [
     {
@@ -35,7 +36,7 @@ window.PORTFOLIO = {
       date: "2022",
       description: "Led a team of cross-functional leaders to eliminate priority issues causing production shutdowns.",
       tags: [],
-      image: "",
+      image: "assets/img/biopharma_perfusion.jpg",
       links: []
     },
     {

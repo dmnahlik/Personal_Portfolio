@@ -88,20 +88,18 @@
 
     items.forEach((item) => {
       const links = (item.links || []).filter((l) => l && l.url);
+      const img = el("img", {
+        src: item.image || PLACEHOLDER_IMG,
+        alt: item.image ? item.title : "",
+        loading: "lazy",
+        width: "640",
+        height: "360"
+      });
+      if (item.imagePosition) img.style.objectPosition = item.imagePosition;
       const card = el(
         "article",
         { class: "card reveal", "data-type": item.type || "project" },
-        el(
-          "div",
-          { class: "card__media" },
-          el("img", {
-            src: item.image || PLACEHOLDER_IMG,
-            alt: item.image ? item.title : "",
-            loading: "lazy",
-            width: "640",
-            height: "360"
-          })
-        ),
+        el("div", { class: "card__media" }, img),
         el(
           "div",
           { class: "card__body" },

@@ -55,3 +55,9 @@ In the Projects & Awards Seciton. Update the first project to be titled: Biophar
 
 ## 2026-11-08 20:43 CST
 Remove the TODO, Tech, and Stack tags from the first project and remove the "Code" link from the first project as well. Push and deploy these changes
+
+## 2026-11-08 20:47 CST
+Please include this image in the header of the first project (attached biopharmaceutical manufacturing image)
+
+## 2026-11-08 20:51 CST
+Please replace that image with this one and then push and deploy (attached cleanroom bioreactor photo)
