@@ -118,3 +118,6 @@ change that line in CLAUDE.md to "Python server (Poetry) + Next.js/TypeScript fr
 
 ## 2026-11-08 23:04 CST
 the preview looks good. please switch to the live site
+
+## 2026-11-08 23:09 CST
+proceed with that recommendation to merge thropugh a pull request and create a proper main branch.
