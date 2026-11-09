@@ -65,7 +65,7 @@ window.PORTFOLIO = {
   skills: [
     {
       category: "Quality Management System",
-      icon: "💻",
+      icon: "📋",
       items: [
         { name: "SQL Coding", level: 90 },
         { name: "Data Projection", level: 95 },
