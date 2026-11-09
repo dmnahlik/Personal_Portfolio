@@ -20,7 +20,7 @@ window.PORTFOLIO = {
   /* Section subtitles */
   sections: {
     projectsSubtitle: "I have worked on dozens of special projects during my career. Below are a few highlighted projects and recent recognition.",
-    skillsSubtitle: "TODO: A short line summarizing your technical strengths.",
+    skillsSubtitle: "Skilled in Quality Management System and Document Review & Publication as well as in tools like MS Office and AI tools.",
     contactSubtitle: "Please reach out and contact me if you have any questions regarding my work."
   },
 
