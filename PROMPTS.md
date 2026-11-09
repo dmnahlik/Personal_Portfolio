@@ -73,3 +73,6 @@ For the third card, please include the attached image in the header. The year of
 
 ## 2026-11-08 21:16 CST
 This looks great. please push and deploy these updates.
+
+## 2026-11-08 21:20 CST
+Update the Projects&Awards subtitle to "I have worked on dozens of special projects during my carreer. Below are a few highlighted projects and recent recognician." Push and deploy this update.

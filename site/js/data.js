@@ -19,7 +19,7 @@ window.PORTFOLIO = {
 
   /* Section subtitles */
   sections: {
-    projectsSubtitle: "TODO: A short line about the work and recognition highlighted below.",
+    projectsSubtitle: "I have worked on dozens of special projects during my career. Below are a few highlighted projects and recent recognition.",
     skillsSubtitle: "TODO: A short line summarizing your technical strengths.",
     contactSubtitle: "Please reach out and contact me if you have any questions regarding my work."
   },
