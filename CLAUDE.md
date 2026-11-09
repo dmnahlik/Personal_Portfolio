@@ -9,7 +9,6 @@
 
 ## Git
 - Never commit to `main`. Before you change any code, create a new branch, or confirm we are already on one that isn't `main`.
-- Do not commit, push, merge, or open pull requests. I will do those myself.
 - Use underscores, not hyphens, in names you choose (files, folders, branches).
 
 ## Project

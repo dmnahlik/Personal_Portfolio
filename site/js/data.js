@@ -12,8 +12,8 @@ window.PORTFOLIO = {
     greeting: "Hello, I'm",
     title: "TODO: Your Title / Role",           // e.g. "Cloud & Software Developer"
     intro:
-      "TODO: Two or three sentences introducing yourself: what you do, what you're passionate about, and what you're looking for.",
-    photo: "assets/img/headshot_placeholder.svg", // TODO: replace with assets/img/headshot.jpg
+      "Hardworking Quality Leader with a focus in continuous improvement and Lean Six Sigma. With over a decade of experience in pharmaceutical and aerospace manufacturing, I have worked hundreds of corrective actions and Lean projects that have reduced cost and waste for the various companies I have worked for.",
+    photo: "assets/img/headshot.jpg",
     resume: ""                                   // TODO: e.g. "assets/resume/David_Nahlik_Resume.pdf" (button hidden while empty)
   },
 

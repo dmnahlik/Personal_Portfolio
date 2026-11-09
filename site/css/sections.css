@@ -84,6 +84,7 @@
   width: min(320px, 70vw);
   aspect-ratio: 1;
   object-fit: cover;
+  object-position: 50% 12%; /* portrait photo: keep the face in the circle */
   border-radius: 50%;
   border: 6px solid var(--color-surface);
   box-shadow: var(--shadow-lg);

@@ -16,3 +16,12 @@ Please make the following updates to the Contact section: Update the description
 
 ## 2026-11-08 19:48 CST
 please push to my github repository and deploy to google cloud
+
+## 2026-11-08 20:04 CST
+On the home page, please update the intriduction seciton to read "Hardworking Quality Leader with a focus in continuous improvement and Lean Six Sigma. With over a decade of experience in pharmaceutical and aerospace manufacturing, I have worked hundreds of corrective actions and Lean projects that have reduced cost and waste for the various companies I have worked for."
+
+## 2026-11-08 20:07 CST
+Please include this image as my profile picture (attached photo)
+
+## 2026-11-08 20:09 CST
+please save and push these updates to the github repository and deploy to the google cloud project
