@@ -79,3 +79,6 @@ Update the Projects&Awards subtitle to "I have worked on dozens of special proje
 
 ## 2026-11-08 21:37 CST
 In the Skills section, update the card for Tools to just say "Tools" instead of "TODO: Tools". Remove the TODO, Chip Style, and Skills tags. Add tage for "MS Office", "Claude AI", "RCCA", and "Git". Push and Deploy this update
+
+## 2026-11-08 21:44 CST
+Update one of the skills cards to say "Quality Management System". Replace Skill A with "SQL Coding" and set the bar to 90%. Update Skill B to "Data Projection" and set the bar to 95%. Add in a new skill bar titled "Python Coding" and set the bar to 75%. Push and deploy these updates.

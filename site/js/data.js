@@ -64,11 +64,12 @@ window.PORTFOLIO = {
      or as plain strings (shown as chips).                              */
   skills: [
     {
-      category: "TODO: Languages",
+      category: "Quality Management System",
       icon: "💻",
       items: [
-        { name: "TODO: Skill A", level: 85 },
-        { name: "TODO: Skill B", level: 70 }
+        { name: "SQL Coding", level: 90 },
+        { name: "Data Projection", level: 95 },
+        { name: "Python Coding", level: 75 }
       ]
     },
     {
